@@ -5,7 +5,7 @@ function getByName(name, callback) {
   if (!global.ldapClient) {
 
     console.log('Global Client not found');
-    var LDAP_ENDPOINT = configuration.LDAP_ENDPOINT
+    var LDAP_ENDPOINT = configuration.LDAP_ENDPOINT;
     var client = ldap.createClient({
       url: LDAP_ENDPOINT,
       idleTimeout: 30000

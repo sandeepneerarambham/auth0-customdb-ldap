@@ -5,8 +5,9 @@ function login(name, password, callback) {
   if (!global.ldapClient) {
 
     console.log('Global Client not found');
+    var LDAP_ENDPOINT = configuration.LDAP_ENDPOINT;
     var client = ldap.createClient({
-      url: configuration.LDAP_ENDPOINT,
+      url: LDAP_ENDPOINT,
       idleTimeout: 30000
     });
       // Example LDAP_BIND_USER = CN=Mary Smith,CN=Users,DC=mycompany,DC=local
